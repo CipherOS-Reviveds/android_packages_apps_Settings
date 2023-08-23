@@ -216,15 +216,13 @@
     <string name="skip_label" msgid="6380034601349015895">"Bỏ qua"</string>
     <string name="next_label" msgid="1248293387735652187">"Tiếp theo"</string>
     <string name="language_picker_title" msgid="4271307478263345133">"Ngôn ngữ"</string>
-    <string name="language_picker_category_title" msgid="1792199453060454565">"Thứ tự ngôn ngữ ưu tiên"</string>
-    <string name="desc_current_default_language" msgid="1901157141663662859">"Ngôn ngữ hệ thống"</string>
     <string name="locale_remove_menu" msgid="3521546263421387474">"Xóa"</string>
     <string name="add_a_language" msgid="2126220398077503271">"Thêm ngôn ngữ"</string>
     <string name="app_locale_preference_title" msgid="5513627099300360232">"Ngôn ngữ"</string>
     <string name="locale_picker_category_title" msgid="6212064706962721255">"Ngôn ngữ ưa thích"</string>
-    <string name="app_locales_picker_menu_title" msgid="7617427959223831373">"Ngôn ngữ ứng dụng"</string>
+    <string name="app_locales_picker_menu_title" msgid="3412278173933199721">"Ngôn ngữ ứng dụng"</string>
     <string name="app_locale_picker_summary" msgid="6742557329924446252">"Đặt ngôn ngữ cho từng ứng dụng"</string>
-    <string name="app_locale_picker_title" msgid="2431448962911301366">"Ngôn ngữ ứng dụng"</string>
+    <string name="app_locale_picker_title" msgid="8423365003726200684">"Ngôn ngữ ứng dụng"</string>
     <string name="suggested_app_locales_title" msgid="8898358282377369405">"Ngôn ngữ đề xuất"</string>
     <string name="all_supported_app_locales_title" msgid="5479289964316009026">"Tất cả ngôn ngữ"</string>
     <string name="preference_of_system_locale_title" msgid="8067226276038751504">"Ngôn ngữ hệ thống"</string>
@@ -232,9 +230,6 @@
     <string name="desc_no_available_supported_locale" msgid="7883271726226947273">"Bạn chưa thể chọn ngôn ngữ cho ứng dụng này trong phần Cài đặt."</string>
     <string name="desc_app_locale_disclaimer" msgid="5295933110644789052">"Ngôn ngữ có thể khác với ngôn ngữ có sẵn trong ứng dụng. Một số ứng dụng có thể không hỗ trợ cài đặt này."</string>
     <string name="desc_app_locale_selection_supported" msgid="6149467826636295127">"Chỉ những ứng dụng cho phép lựa chọn ngôn ngữ mới xuất hiện ở đây."</string>
-    <string name="desc_introduction_of_language_picker" msgid="1038423471887102449">"Hệ thống, ứng dụng và trang web sẽ sử dụng ngôn ngữ đầu tiên được hỗ trợ trong số các ngôn ngữ mà bạn ưu tiên."</string>
-    <string name="desc_notice_of_language_picker" msgid="3449290526457925447">"Để chọn ngôn ngữ cho từng ứng dụng, hãy chuyển đến phần cài đặt ngôn ngữ ứng dụng."</string>
-    <string name="desc_locale_helper_footer_general" msgid="6967183342596405116">"Tìm hiểu thêm về ngôn ngữ"</string>
     <plurals name="dlg_remove_locales_title" formatted="false" msgid="2845515796732609837">
       <item quantity="other">Xóa các ngôn ngữ đã chọn?</item>
       <item quantity="one">Xóa ngôn ngữ đã chọn?</item>
@@ -242,7 +237,7 @@
     <string name="dlg_remove_locales_message" msgid="8110560091134252067">"Văn bản sẽ hiển thị bằng ngôn ngữ khác."</string>
     <string name="dlg_remove_locales_error_title" msgid="5875503658221562572">"Không thể xóa tất cả ngôn ngữ"</string>
     <string name="dlg_remove_locales_error_message" msgid="6504279959974675302">"Giữ ít nhất một ngôn ngữ ưa thích"</string>
-    <string name="locale_not_translated" msgid="3071618135527110152">"Không có ở dạng ngôn ngữ hệ thống"</string>
+    <string name="locale_not_translated" msgid="5079729745235316146">"Có thể không khả dụng trong một số ứng dụng"</string>
     <string name="action_drag_label_move_up" msgid="3392196942330705015">"Chuyển lên"</string>
     <string name="action_drag_label_move_down" msgid="9069518740553953426">"Chuyển xuống"</string>
     <string name="action_drag_label_move_top" msgid="2430471023612171619">"Chuyển lên trên cùng"</string>
@@ -280,7 +275,7 @@
     <string name="roaming_reenable_title" msgid="770824950144026180">"Cho phép chuyển vùng dữ liệu?"</string>
     <string name="networks" msgid="5184501333492775095">"Chọn nhà cung cấp dịch vụ"</string>
     <string name="sum_carrier_select" msgid="1669911795517995916">"Chọn nhà cung cấp dịch vụ mạng"</string>
-    <string name="date_and_time_settings_title" msgid="2305454529709812364">"Ngày &amp; giờ"</string>
+    <string name="date_and_time_settings_title" msgid="2305454529709812364">"Ngày và giờ"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="1841717199409629742">"Đặt ngày giờ"</string>
     <string name="date_and_time_settings_summary" msgid="334967758944498010">"Đặt ngày, giờ, múi giờ &amp; định dạng"</string>
     <string name="date_time_auto" msgid="4239202185055225869">"Tự động đặt giờ"</string>
@@ -347,7 +342,7 @@
     <string name="security_passwords_title" msgid="4154420930973818581">"Quyền riêng tư"</string>
     <string name="disabled_by_administrator_summary" msgid="5424846182313851124">"Không có sẵn"</string>
     <string name="security_status_title" msgid="6958004275337618656">"Trạng thái bảo mật"</string>
-    <string name="security_dashboard_summary" msgid="7571035662779425918">"Phương thức khóa màn hình, Tìm thiết bị, bảo mật ứng dụng"</string>
+    <string name="security_dashboard_summary" msgid="7571035662779425918">"Phương thức khóa màn hình, Tìm thiết bị của tôi, bảo mật ứng dụng"</string>
     <string name="safety_center_title" msgid="7732397372178774777">"Bảo mật và quyền riêng tư"</string>
     <string name="safety_center_summary" msgid="3554867379951053869">"Bảo mật ứng dụng, khoá thiết bị, quyền"</string>
     <string name="security_settings_face_preference_summary" msgid="6675126437396914838">"Đã thêm khuôn mặt"</string>
@@ -443,7 +438,7 @@
     <string name="security_settings_face_enroll_improve_face_alert_title" msgid="6194184776580066012">"Thiết lập tính năng Mở khóa bằng khuôn mặt"</string>
     <string name="security_settings_face_enroll_improve_face_alert_body" msgid="2670118180411127323">"Xóa mẫu khuôn mặt hiện tại của bạn để thiết lập lại tính năng Mở khóa bằng khuôn mặt.\n\nMẫu khuôn mặt của bạn sẽ bị xóa vĩnh viễn theo cách an toàn.\n\nSau khi xóa, bạn sẽ cần nhập mã PIN, hình mở khóa hoặc mật khẩu để mở khóa điện thoại hoặc xác thực trong các ứng dụng."</string>
     <string name="security_settings_face_enroll_improve_face_alert_body_fingerprint" msgid="2469599074650327489">"Xóa mẫu khuôn mặt hiện tại của bạn để thiết lập lại tính năng Mở khóa bằng khuôn mặt.\n\nMẫu khuôn mặt của bạn sẽ bị xóa vĩnh viễn theo cách an toàn.\n\nSau khi xóa, bạn sẽ cần nhập vân tay, mã PIN, hình mở khóa hoặc mật khẩu để mở khóa điện thoại hoặc xác thực trong các ứng dụng."</string>
-    <string name="security_settings_face_settings_use_face_category" msgid="1638314154119800188">"Dùng tính năng Mở khóa bằng khuôn mặt để"</string>
+    <string name="security_settings_face_settings_use_face_category" msgid="1638314154119800188">"Dùng tính năng mở khóa bằng khuôn mặt cho"</string>
     <string name="security_settings_face_settings_preferences_category" msgid="7628929873407280453">"Khi dùng tính năng Mở khóa bằng khuôn mặt"</string>
     <string name="security_settings_face_settings_require_attention" msgid="4395309855914391104">"Yêu cầu mở mắt"</string>
     <string name="security_settings_face_settings_require_attention_details" msgid="2546230511769544074">"Để mở khóa điện thoại, bạn phải mở mắt"</string>
@@ -458,6 +453,7 @@
     <string name="security_settings_face_settings_remove_dialog_details_convenience" msgid="475568135197468990">"Mẫu khuôn mặt của bạn sẽ bị xoá vĩnh viễn theo cách an toàn.\n\nSau khi xoá, bạn sẽ cần nhập mã PIN, hình mở khoá hoặc mật khẩu để mở khoá điện thoại."</string>
     <string name="security_settings_face_settings_context_subtitle" msgid="8284262560781442403">"Dùng tính năng Mở khóa bằng khuôn mặt để mở khóa điện thoại"</string>
     <string name="security_settings_fingerprint_preference_title" msgid="2484965173528415458">"Vân tay"</string>
+    <string name="security_settings_fingerprint_settings_preferences_category" msgid="8975029409126780752">"Khi dùng tính năng Mở khoá bằng vân tay"</string>
     <string name="security_settings_work_fingerprint_preference_title" msgid="2076006873519745979">"Vân tay cho công việc"</string>
     <string name="fingerprint_manage_category_title" msgid="1249349505688268850">"Quản lý vân tay"</string>
     <string name="fingerprint_usage_category_title" msgid="8757959085075024856">"Sử dụng vân tay để"</string>
@@ -471,6 +467,7 @@
     <string name="security_settings_fingerprint_enroll_introduction_title" msgid="7931650601996313070">"Thiết lập vân tay"</string>
     <string name="security_settings_fingerprint_enroll_consent_introduction_title" msgid="2278592030102282364">"Cho phép mở khóa bằng vân tay"</string>
     <string name="security_settings_fingerprint_enroll_introduction_title_unlock_disabled" msgid="1911710308293783998">"Sử dụng vân tay của bạn"</string>
+    <string name="security_settings_fingerprint_settings_footer_learn_more" msgid="2508322993726483601">"Tìm hiểu thêm về tính năng Mở khoá bằng vân tay"</string>
     <string name="security_settings_fingerprint_enroll_introduction_v2_message" product="tablet" msgid="1533352560544756928">"Bạn có thể dùng vân tay để mở khóa máy tính bảng hoặc xác minh danh tính, chẳng hạn như khi đăng nhập vào các ứng dụng hoặc phê duyệt một giao dịch mua hàng."</string>
     <string name="security_settings_fingerprint_enroll_introduction_v2_message" product="device" msgid="3570866595300511932">"Bạn có thể dùng vân tay để mở khóa thiết bị hoặc xác minh danh tính, chẳng hạn như khi đăng nhập vào các ứng dụng hoặc phê duyệt một giao dịch mua hàng."</string>
     <string name="security_settings_fingerprint_enroll_introduction_v2_message" product="default" msgid="8539442240212670385">"Bạn có thể dùng vân tay để mở khóa điện thoại hoặc xác minh danh tính, chẳng hạn như khi đăng nhập vào các ứng dụng hoặc phê duyệt một giao dịch mua hàng."</string>
@@ -525,10 +522,29 @@
     <string name="security_settings_fingerprint_v2_enroll_acquire_too_fast" msgid="5891227328100822018">"Hãy nhấc ngón tay lên sau khi bạn cảm thấy rung"</string>
     <string name="security_settings_fingerprint_v2_enroll_acquire_too_bright" msgid="769646735950329315">"Hãy chuyển sang vị trí có ánh sáng dịu hơn rồi thử lại"</string>
     <string name="security_settings_fingerprint_v2_enroll_error_max_attempts" msgid="1464972470750764128">"Bạn đã đạt đến số lần thử tối đa"</string>
-    <string name="security_settings_fingerprint_v2_home_screen_text" product="tablet" msgid="179325591887291180">"Bạn có thể dùng vân tay để mở khóa máy tính bảng hoặc xác minh danh tính, chẳng hạn như khi đăng nhập vào ứng dụng"</string>
-    <string name="security_settings_fingerprint_v2_home_screen_text" product="device" msgid="2503218139575057099">"Bạn có thể dùng vân tay để mở khóa thiết bị hoặc xác minh danh tính, chẳng hạn như khi đăng nhập vào ứng dụng"</string>
-    <string name="security_settings_fingerprint_v2_home_screen_text" product="default" msgid="481286891358925579">"Bạn có thể dùng vân tay để mở khóa điện thoại hoặc xác minh danh tính, chẳng hạn như khi đăng nhập vào ứng dụng"</string>
+    <string name="security_settings_activeunlock_preference_title" msgid="4257580421087062228">"Mở khoá bằng đồng hồ"</string>
+    <string name="biometric_settings_intro_with_activeunlock" product="default" msgid="6583248094453119314">"Khi bạn thiết lập tính năng Mở khóa bằng khuôn mặt và Mở khóa bằng vân tay, điện thoại của bạn sẽ yêu cầu bạn cung cấp vân tay khi bạn đeo khẩu trang hoặc ở chỗ tối.\n\nBạn có thể mở khoá bằng đồng hồ khi điện thoại không nhận dạng được khuôn mặt hoặc vân tay của bạn."</string>
+    <string name="biometric_settings_intro_with_activeunlock" product="tablet" msgid="8930396405433023076">"Khi bạn thiết lập tính năng Mở khoá bằng khuôn mặt và Mở khoá bằng vân tay, máy tính bảng của bạn sẽ yêu cầu bạn cung cấp vân tay khi bạn đeo khẩu trang hoặc ở chỗ tối.\n\nBạn có thể mở khoá bằng đồng hồ khi máy tính bảng không nhận dạng được khuôn mặt hoặc vân tay của bạn."</string>
+    <string name="biometric_settings_intro_with_fingerprint" msgid="4312041617237493461">"Bạn có thể mở khoá bằng đồng hồ khi điện thoại không nhận dạng được vân tay của bạn."</string>
+    <string name="biometric_settings_intro_with_face" msgid="7658123658803417930">"Bạn có thể mở khoá bằng đồng hồ khi điện thoại không nhận dạng được khuôn mặt của bạn."</string>
+    <string name="biometric_settings_use_face_or_watch_preference_summary" msgid="4969685200340861744">"Dùng khuôn mặt hoặc đồng hồ"</string>
+    <string name="biometric_settings_use_fingerprint_or_watch_preference_summary" msgid="2425628094194828407">"Dùng vân tay hoặc đồng hồ"</string>
+    <string name="biometric_settings_use_face_fingerprint_or_watch_preference_summary" msgid="188805113048792007">"Dùng khuôn mặt, vân tay hoặc đồng hồ"</string>
+    <string name="biometric_settings_use_watch_preference_summary" msgid="2311453276747908475">"Dùng đồng hồ"</string>
+    <string name="security_settings_activeunlock_require_face_fingerprint_setup_title" msgid="8776904312629209685">"Trước hết, thiết lập chế độ Mở khóa bằng khuôn mặt/vân tay"</string>
+    <string name="security_settings_activeunlock_require_face_fingerprint_setup_message" msgid="1669326067732567911">"Bạn có thể mở khoá bằng đồng hồ khi điện thoại không nhận dạng được khuôn mặt hoặc vân tay của bạn"</string>
+    <string name="security_settings_activeunlock_require_fingerprint_setup_title" msgid="6703703635881050623">"Trước hết, hãy thiết lập tính năng Mở khoá bằng vân tay"</string>
+    <string name="security_settings_activeunlock_require_fingerprint_setup_message" msgid="4966813766409918392">"Bạn có thể mở khoá bằng đồng hồ khi điện thoại không nhận dạng được vân tay của bạn"</string>
+    <string name="security_settings_activeunlock_require_face_setup_title" msgid="1428795376597739880">"Trước hết hãy thiết lập tính năng Mở khoá bằng khuôn mặt"</string>
+    <string name="security_settings_activeunlock_require_face_setup_message" msgid="8904070645721933399">"Bạn có thể mở khoá bằng đồng hồ khi điện thoại không nhận dạng được khuôn mặt của bạn"</string>
+    <string name="security_settings_activeunlock_biometric_setup" msgid="8876454457817955475">"Thiết lập"</string>
+    <string name="security_settings_fingerprint_single_watch_preference_summary" msgid="6464470096384164369">"Đã thêm vân tay và <xliff:g id="WATCH">%s</xliff:g>"</string>
+    <string name="security_settings_fingerprint_multiple_watch_preference_summary" msgid="2259261786932097004">"Đã thêm vân tay và <xliff:g id="WATCH">%s</xliff:g>"</string>
+    <string name="security_settings_face_watch_preference_summary" msgid="5817376447253802793">"Đã thêm khuôn mặt và <xliff:g id="WATCH">%s</xliff:g>"</string>
+    <string name="security_settings_fingerprint_single_face_watch_preference_summary" msgid="764951912234638192">"Đã thêm khuôn mặt, vân tay và <xliff:g id="WATCH">%s</xliff:g>"</string>
+    <string name="security_settings_fingerprint_multiple_face_watch_preference_summary" msgid="3935500711366489380">"Đã thêm khuôn mặt, vân tay và <xliff:g id="WATCH">%s</xliff:g>"</string>
     <string name="security_settings_biometric_preference_title" msgid="298146483579539448">"Mở khóa bằng khuôn mặt và vân tay"</string>
+    <string name="security_settings_work_biometric_preference_title" msgid="3121755615533533585">"Dùng tính năng Mở khoá bằng khuôn mặt và vân tay cho công việc"</string>
     <string name="security_settings_biometric_preference_summary_none_enrolled" msgid="6941188982863819389">"Nhấn để thiết lập"</string>
     <string name="security_settings_biometric_preference_summary_both_fp_multiple" msgid="4821859306609955966">"Đã thêm khuôn mặt và các vân tay"</string>
     <string name="security_settings_biometric_preference_summary_both_fp_single" msgid="684409535278676426">"Đã thêm khuôn mặt và vân tay"</string>
@@ -558,9 +574,9 @@
     <string name="security_settings_sfps_enroll_find_sensor_title" msgid="8327884364635804363">"Chạm vào nút nguồn nhưng không nhấn"</string>
     <string name="security_settings_udfps_enroll_find_sensor_title" msgid="8077484429913330179">"Cách thiết lập vân tay"</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_message" msgid="6160543980992596286">"Cảm biến nằm ở mặt sau của điện thoại. Hãy dùng ngón tay trỏ của bạn."</string>
-    <string name="security_settings_sfps_enroll_find_sensor_message" product="tablet" msgid="3861487880213212565">"Cảm biến vân tay nằm trên nút nguồn. Đó là nút phẳng bên cạnh nút tăng âm lượng trên cạnh của máy tính bảng.\n\nKhi bạn nhấn nút nguồn, màn hình sẽ tắt."</string>
-    <string name="security_settings_sfps_enroll_find_sensor_message" product="device" msgid="700314363994033893">"Cảm biến vân tay nằm trên nút nguồn. Đó là nút phẳng bên cạnh nút tăng âm lượng trên cạnh của thiết bị.\n\nKhi bạn nhấn nút nguồn, màn hình sẽ tắt."</string>
-    <string name="security_settings_sfps_enroll_find_sensor_message" product="default" msgid="5857063580604638331">"Cảm biến vân tay nằm trên nút nguồn. Đó là nút phẳng bên cạnh nút tăng âm lượng trên cạnh của điện thoại.\n\nKhi bạn nhấn nút nguồn, màn hình sẽ tắt."</string>
+    <string name="security_settings_sfps_enroll_find_sensor_message" product="tablet" msgid="6345521315059783195">"Cảm biến vân tay nằm trên nút nguồn. Đó là nút phẳng bên cạnh nút tăng âm lượng trên cạnh của máy tính bảng."</string>
+    <string name="security_settings_sfps_enroll_find_sensor_message" product="device" msgid="5548015866784733975">"Cảm biến vân tay nằm trên nút nguồn. Đó là nút phẳng bên cạnh nút tăng âm lượng trên cạnh của thiết bị."</string>
+    <string name="security_settings_sfps_enroll_find_sensor_message" product="default" msgid="1977903336177861081">"Cảm biến vân tay nằm trên nút nguồn. Đó là nút phẳng bên cạnh nút tăng âm lượng trên cạnh của điện thoại."</string>
     <string name="security_settings_udfps_enroll_find_sensor_message" msgid="8383106460819519961">"Cảm biến vân tay ở trên màn hình. Bạn sẽ chụp vân tay của mình trên màn hình tiếp theo."</string>
     <string name="security_settings_udfps_enroll_find_sensor_start_button" msgid="3172268783620336357">"Bắt đầu"</string>
     <string name="security_settings_udfps_enroll_a11y" msgid="1899453114050362235">"Di chuyển ngón tay trên màn hình để tìm cảm biến. Chạm và giữ cảm biến vân tay."</string>
@@ -588,20 +604,19 @@
     <string name="security_settings_sfps_enroll_right_edge_title" msgid="823106857743394392">"Cuối cùng, hãy đặt cạnh phải của ngón tay lên cảm biến"</string>
     <string name="security_settings_udfps_enroll_edge_message" msgid="4455253923746607702">"Đặt vân tay ở phần bên của ngón tay lên cảm biến rồi giữ, sau đó chuyển sang phần bên kia"</string>
     <string name="security_settings_udfps_enroll_repeat_a11y_message" msgid="2785464357615568197">"Thao tác này giúp ghi lại được nhiều vân tay hơn"</string>
-    <!-- String.format failed for translation -->
-    <!-- no translation found for security_settings_sfps_enroll_progress_a11y_message (6450772721691523736) -->
-    <skip />
-    <!-- String.format failed for translation -->
-    <!-- no translation found for security_settings_sfps_animation_a11y_label (8808819903730940446) -->
-    <skip />
-    <!-- String.format failed for translation -->
-    <!-- no translation found for security_settings_udfps_enroll_progress_a11y_message (6183535114682369699) -->
-    <skip />
+    <string name="security_settings_sfps_enroll_progress_a11y_message" msgid="6450772721691523736">"Đã hoàn tất <xliff:g id="PERCENTAGE">%d</xliff:g>%% bước đăng ký vân tay"</string>
+    <string name="security_settings_sfps_animation_a11y_label" msgid="8808819903730940446">"Đã hoàn tất <xliff:g id="PERCENTAGE">%d</xliff:g> %%"</string>
+    <string name="security_settings_udfps_enroll_progress_a11y_message" msgid="6183535114682369699">"Đã hoàn tất <xliff:g id="PERCENTAGE">%d</xliff:g>%% bước đăng ký vân tay"</string>
     <string name="security_settings_fingerprint_enroll_finish_title" msgid="3606325177406951457">"Đã thêm vân tay"</string>
-    <string name="security_settings_sfps_enroll_finish" msgid="3948249010300560451">"Giờ đây, bạn có thể dùng vân tay để mở khoá máy tính bảng hoặc xác minh danh tính, chẳng hạn như khi đăng nhập vào ứng dụng hoặc phê duyệt giao dịch mua"</string>
-    <string name="security_settings_fingerprint_enroll_finish_v2_message" product="tablet" msgid="4372740782513990687">"Giờ đây, bạn có thể dùng vân tay để mở khóa máy tính bảng hoặc xác minh danh tính, chẳng hạn như khi bạn đăng nhập vào các ứng dụng"</string>
-    <string name="security_settings_fingerprint_enroll_finish_v2_message" product="device" msgid="6208711210125838327">"Giờ đây, bạn có thể dùng vân tay để mở khóa thiết bị hoặc xác minh danh tính, chẳng hạn như khi bạn đăng nhập vào các ứng dụng"</string>
-    <string name="security_settings_fingerprint_enroll_finish_v2_message" product="default" msgid="4755651286485895622">"Giờ đây, bạn có thể dùng vân tay để mở khóa điện thoại hoặc xác minh danh tính, chẳng hạn như khi bạn đăng nhập vào các ứng dụng"</string>
+    <string name="security_settings_fingerprint_enroll_finish_v2_message" product="tablet" msgid="6064618417107305796">"Giờ đây, bạn có thể dùng vân tay để mở khoá máy tính bảng hoặc xác minh danh tính, chẳng hạn như khi bạn đăng nhập vào ứng dụng hoặc phê duyệt giao dịch mua"</string>
+    <string name="security_settings_fingerprint_enroll_finish_v2_message" product="device" msgid="1948980056333872057">"Giờ đây, bạn có thể dùng vân tay để mở khoá thiết bị hoặc xác minh danh tính, chẳng hạn như khi bạn đăng nhập vào ứng dụng hoặc phê duyệt giao dịch mua"</string>
+    <string name="security_settings_fingerprint_enroll_finish_v2_message" product="default" msgid="3084541878035403475">"Giờ đây, bạn có thể dùng vân tay để mở khoá điện thoại hoặc xác minh danh tính, chẳng hạn như khi bạn đăng nhập vào ứng dụng hoặc phê duyệt giao dịch mua"</string>
+    <string name="security_settings_fingerprint_enroll_finish_v2_add_fingerprint_message" product="tablet" msgid="308213612040535580">"Giờ đây, bạn có thể dùng vân tay để mở khoá máy tính bảng hoặc xác minh danh tính, chẳng hạn như khi đăng nhập vào ứng dụng hoặc phê duyệt giao dịch mua. \n\nHãy thêm một dấu vân tay khác để luôn có thể mở khoá dù bạn cầm máy tính bảng theo cách nào đi nữa."</string>
+    <string name="security_settings_fingerprint_enroll_finish_v2_add_fingerprint_message" product="device" msgid="911541337099737104">"Giờ đây, bạn có thể dùng vân tay để mở khoá thiết bị hoặc xác minh danh tính, chẳng hạn như khi đăng nhập vào ứng dụng hoặc phê duyệt giao dịch mua.\n\nHãy thêm một dấu vân tay khác để luôn có thể mở khoá dù bạn cầm thiết bị theo cách nào đi nữa."</string>
+    <string name="security_settings_fingerprint_enroll_finish_v2_add_fingerprint_message" product="default" msgid="5261993991973265283">"Giờ đây, bạn có thể dùng vân tay để mở khoá điện thoại hoặc xác minh danh tính, chẳng hạn như khi đăng nhập vào ứng dụng hoặc phê duyệt giao dịch mua.\n\nHãy thêm một dấu vân tay khác để luôn có thể mở khoá dù bạn cầm điện thoại theo cách nào đi nữa."</string>
+    <string name="security_settings_require_screen_on_to_auth_title" msgid="1641621458536715518">"Chạm để mở khoá bất cứ lúc nào"</string>
+    <string name="security_settings_require_screen_on_to_auth_description" msgid="4158414711168345398">"Chạm vào cảm biến để mở khoá, ngay cả khi đã tắt màn hình. Với chế độ cài đặt này, tình trạng mở khoá ngoài ý muốn sẽ dễ xảy ra hơn."</string>
+    <string name="security_settings_require_screen_on_to_auth_keywords" msgid="5557869560397089603">"Màn hình, mở khoá"</string>
     <string name="security_settings_fingerprint_enroll_enrolling_skip" msgid="3004786457919122854">"Thực hiện sau"</string>
     <string name="security_settings_udfps_tip_fingerprint_help" msgid="7580784640741217494">"Nhấc ngón tay lên rồi chạm lại"</string>
     <string name="security_settings_udfps_side_fingerprint_help" msgid="2567232481013195191">"Đặt vân tay ở phần bên của ngón tay lên cảm biến rồi giữ, sau đó chuyển sang phần bên kia"</string>
@@ -659,6 +674,7 @@
     <string name="security_settings_fingerprint_enroll_done" msgid="9198775984215057337">"Xong"</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_title" msgid="5742429501012827526">"Rất tiếc, đó không phải là cảm biến"</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_message" msgid="7172969336386036998">"Chạm vào cảm biến ở mặt sau điện thoại. Dùng ngón tay trỏ."</string>
+    <string name="security_settings_fingerprint_enroll_error_unable_to_process_dialog_title" msgid="5796228438604723279">"Chưa đăng ký xong"</string>
     <string name="security_settings_fingerprint_enroll_error_dialog_title" msgid="8582267776559099046">"Hết thời gian thiết lập vân tay"</string>
     <string name="security_settings_fingerprint_enroll_error_timeout_dialog_message" msgid="467965101751652156">"Hãy thử lại ngay bây giờ hoặc thiết lập vân tay của bạn sau trong Cài đặt"</string>
     <string name="security_settings_fingerprint_enroll_error_generic_dialog_message" msgid="6068935528640241271">"Đăng ký dấu vân tay không hoạt động. Hãy thử lại hoặc sử dụng ngón tay khác."</string>
@@ -745,17 +761,23 @@
     <string name="fingerprint_unlock_set_unlock_pin" msgid="4724451168139460493">"Vân tay + Mã PIN"</string>
     <string name="fingerprint_unlock_set_unlock_password" msgid="5614333047430835971">"Vân tay + Mật khẩu"</string>
     <string name="fingerprint_unlock_skip_fingerprint" msgid="7631242444064287891">"Tiếp tục mà không thiết lập vân tay"</string>
-    <string name="fingerprint_unlock_title" msgid="4978686534505944042">"Bạn có thể mở khóa điện thoại bằng vân tay của mình. Để đảm bảo an toàn, tùy chọn này yêu cầu một khóa màn hình dự phòng."</string>
+    <string name="fingerprint_unlock_title" product="default" msgid="4978686534505944042">"Bạn có thể mở khóa điện thoại bằng vân tay của mình. Để đảm bảo an toàn, tùy chọn này yêu cầu một khóa màn hình dự phòng."</string>
+    <string name="fingerprint_unlock_title" product="tablet" msgid="8674718459462612186">"Bạn có thể mở khoá máy tính bảng bằng vân tay. Để bảo mật, lựa chọn này yêu cầu bạn phải có một phương thức khoá màn hình dự phòng."</string>
+    <string name="fingerprint_unlock_title" product="device" msgid="3224468142599659740">"Bạn có thể mở khoá thiết bị bằng vân tay. Để bảo mật, lựa chọn này yêu cầu bạn phải có một phương thức khoá màn hình dự phòng."</string>
     <string name="face_unlock_set_unlock_pattern" msgid="3117316407679805330">"Mở khóa bằng khuôn mặt + Hình mở khóa"</string>
     <string name="face_unlock_set_unlock_pin" msgid="5300188327595503657">"Mở khóa bằng khuôn mặt + Mã PIN"</string>
     <string name="face_unlock_set_unlock_password" msgid="8395722611524617956">"Mở khóa bằng khuôn mặt + Mật khẩu"</string>
     <string name="face_unlock_skip_face" msgid="189695556498300008">"Tiếp tục mà không thiết lập tính năng Mở khóa bằng khuôn mặt"</string>
-    <string name="face_unlock_title" msgid="7344830351598247267">"Bạn có thể mở khóa điện thoại bằng khuôn mặt của mình. Để bảo mật, tùy chọn này yêu cầu một khóa màn hình dự phòng."</string>
+    <string name="face_unlock_title" product="default" msgid="7344830351598247267">"Bạn có thể mở khóa điện thoại bằng khuôn mặt của mình. Để bảo mật, tùy chọn này yêu cầu một khóa màn hình dự phòng."</string>
+    <string name="face_unlock_title" product="tablet" msgid="5695698036499155727">"Bạn có thể mở khoá máy tính bảng bằng khuôn mặt. Để bảo mật, lựa chọn này yêu cầu bạn phải có một phương thức khoá màn hình dự phòng."</string>
+    <string name="face_unlock_title" product="device" msgid="6768108756755361161">"Bạn có thể mở khoá thiết bị bằng khuôn mặt. Để bảo mật, lựa chọn này yêu cầu bạn phải có một phương thức khoá màn hình dự phòng."</string>
     <string name="biometrics_unlock_set_unlock_pattern" msgid="8084495264354847044">"Hình mở khóa • Khuôn mặt • Vân tay"</string>
     <string name="biometrics_unlock_set_unlock_pin" msgid="5912980580857825894">"Mã PIN • Khuôn mặt • Vân tay"</string>
     <string name="biometrics_unlock_set_unlock_password" msgid="4612217647465743624">"Mật khẩu • Khuôn mặt • Vân tay"</string>
     <string name="biometrics_unlock_skip_biometrics" msgid="7785643433551409223">"Tiếp tục mà không thiết lập khuôn mặt hoặc vân tay"</string>
-    <string name="biometrics_unlock_title" msgid="616524056055233041">"Bạn có thể mở khóa điện thoại của mình bằng khuôn mặt hoặc vân tay. Để bảo mật, tùy chọn này yêu cầu bạn phải có một phương thức khóa màn hình dự phòng."</string>
+    <string name="biometrics_unlock_title" product="default" msgid="616524056055233041">"Bạn có thể mở khóa điện thoại của mình bằng khuôn mặt hoặc vân tay. Để bảo mật, tùy chọn này yêu cầu bạn phải có một phương thức khóa màn hình dự phòng."</string>
+    <string name="biometrics_unlock_title" product="tablet" msgid="5808626401936488028">"Bạn có thể mở khoá máy tính bảng bằng khuôn mặt hoặc vân tay. Để bảo mật, lựa chọn này yêu cầu bạn phải có một phương thức khoá màn hình dự phòng."</string>
+    <string name="biometrics_unlock_title" product="device" msgid="4912499343509046929">"Bạn có thể mở khoá thiết bị bằng khuôn mặt hoặc vân tay. Để bảo mật, lựa chọn này yêu cầu bạn phải có một phương thức khoá màn hình dự phòng."</string>
     <string name="unlock_set_unlock_disabled_summary" msgid="4022867760387966129">"Do quản trị viên tắt, c.sách mã hóa hay vùng l.trữ t.tin xác thực"</string>
     <string name="unlock_set_unlock_mode_off" msgid="4632139864722236359">"Không"</string>
     <string name="unlock_set_unlock_mode_none" msgid="5596049938457028214">"Vuốt"</string>
@@ -1523,11 +1545,14 @@
     <string name="style_suggestion_summary" msgid="4271131877800968159">"Thử nhiều kiểu, hình nền và các tùy chọn khác"</string>
     <string name="screensaver_settings_title" msgid="3588535639672365395">"Trình bảo vệ màn hình"</string>
     <string name="keywords_screensaver" msgid="7249337959432229172">"trình bảo vệ màn hình"</string>
+    <string name="screensaver_settings_when_to_dream_bedtime" msgid="3279310576803094771">"Không dùng được vì chế độ giờ đi ngủ đang bật"</string>
     <string name="screensaver_settings_toggle_title" msgid="6194634226897244374">"Sử dụng trình bảo vệ màn hình"</string>
-    <string name="screensaver_settings_summary_either_long" msgid="371949139331896271">"Khi sạc hoặc gắn vào đế sạc"</string>
+    <string name="screensaver_settings_summary_either_long" msgid="371949139331896271">"Trong khi sạc hoặc gắn vào đế sạc"</string>
+    <string name="screensaver_settings_summary_dock_and_charging" msgid="8485905100159376156">"Khi gắn vào đế và đang sạc"</string>
     <string name="screensaver_settings_summary_sleep" msgid="6555922932643037432">"Trong khi sạc"</string>
-    <string name="screensaver_settings_summary_dock" msgid="6997766385189369733">"Khi gắn vào đế sạc"</string>
+    <string name="screensaver_settings_summary_dock" msgid="6997766385189369733">"Trong khi gắn vào đế sạc"</string>
     <string name="screensaver_settings_summary_never" msgid="4988141393040918450">"Không bao giờ"</string>
+    <string name="screensaver_settings_summary_on" msgid="4210827304351483645">"Đang bật/<xliff:g id="SCREEN_SAVER">%1$s</xliff:g>"</string>
     <string name="screensaver_settings_summary_off" msgid="8720357504939106923">"Tắt"</string>
     <string name="screensaver_settings_when_to_dream" msgid="8145025742428940520">"Thời điểm khởi động"</string>
     <string name="screensaver_settings_current" msgid="390472865895976891">"Trình bảo vệ màn hình hiện tại"</string>
@@ -1793,6 +1818,8 @@
     <string name="storage_wizard_ready_v2_internal_moved_body" msgid="1163588718127651062">"Bạn có thể bắt đầu sử dụng <xliff:g id="NAME">^1</xliff:g> của mình"</string>
     <string name="battery_status_title" msgid="4661768220545945771">"Tình trạng pin"</string>
     <string name="battery_level_title" msgid="1371765298786083448">"Mức pin"</string>
+    <string name="communal_settings_title" msgid="2845678473945902115">"Dùng chung"</string>
+    <string name="communal_settings_summary" msgid="4923914136953940317">"Các chế độ cài đặt dùng chung"</string>
     <string name="apn_settings" msgid="4295467389400441299">"APN"</string>
     <string name="apn_edit" msgid="2003683641840248741">"Chỉnh sửa điểm truy cập"</string>
     <string name="apn_not_set" msgid="8246646433109750293">"Chưa đặt"</string>
@@ -1924,6 +1951,7 @@
     <string name="bluetooth_untether_blank" msgid="5087548945727762308">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> sẽ được tháo."</string>
     <string name="ethernet_tether_checkbox_text" msgid="959743110824197356">"Chia sẻ Internet qua Ethernet"</string>
     <string name="ethernet_tethering_subtext" product="default" msgid="5998100693350351694">"Chia sẻ kết nối Internet của điện thoại qua Ethernet"</string>
+    <string name="ethernet_tethering_subtext" product="tablet" msgid="8796744370636115313">"Chia sẻ kết nối Internet của máy tính bảng qua Ethernet"</string>
     <string name="tethering_footer_info" msgid="6782375845587483281">"Sử dụng tính năng điểm phát sóng và chia sẻ Internet để cho phép các thiết bị khác kết nối với Internet thông qua dữ liệu di động của bạn. Các ứng dụng cũng có thể tạo điểm phát sóng để chia sẻ nội dung với thiết bị ở gần."</string>
     <string name="tethering_footer_info_sta_ap_concurrency" msgid="2079039077487477676">"Dùng tính năng điểm phát sóng và chia sẻ Internet để cho phép các thiết bị khác kết nối với Internet thông qua dữ liệu di động hoặc Wi-Fi của bạn. Các ứng dụng cũng có thể tạo điểm phát sóng để chia sẻ nội dung với thiết bị ở gần."</string>
     <string name="tethering_help_button_text" msgid="2823655011510912001">"Trợ giúp"</string>
@@ -2063,9 +2091,15 @@
     <string name="lockpassword_strong_auth_required_work_pattern" msgid="6803652050512161140">"Để tăng cường bảo mật, hãy sử dụng hình mở khóa công việc của bạn"</string>
     <string name="lockpassword_strong_auth_required_work_pin" msgid="4208510396448713500">"Để tăng cường bảo mật, hãy nhập mã PIN công việc của bạn"</string>
     <string name="lockpassword_strong_auth_required_work_password" msgid="6119482061429323090">"Để tăng cường bảo mật, hãy nhập mật khẩu công việc của bạn"</string>
-    <string name="lockpassword_confirm_your_pattern_details_frp" msgid="6351784282865851482">"Điện thoại đã được đặt lại về cài đặt gốc. Để sử dụng điện thoại này, hãy nhập hình mở khóa trước."</string>
-    <string name="lockpassword_confirm_your_pin_details_frp" msgid="2128795640346033349">"Điện thoại đã được đặt lại về cài đặt gốc. Để sử dụng điện thoại này, hãy nhập mã PIN trước đó."</string>
-    <string name="lockpassword_confirm_your_password_details_frp" msgid="4031863562975125016">"Điện thoại đã được đặt lại về cài đặt gốc. Để sử dụng điện thoại này, hãy nhập mật khẩu trước đó."</string>
+    <string name="lockpassword_confirm_your_pattern_details_frp" product="default" msgid="6351784282865851482">"Điện thoại đã được đặt lại về cài đặt gốc. Để sử dụng điện thoại này, hãy nhập hình mở khóa trước."</string>
+    <string name="lockpassword_confirm_your_pattern_details_frp" product="tablet" msgid="8596917715101288176">"Đã đặt lại máy tính bảng về trạng thái cài đặt ban đầu. Để sử dụng, hãy nhập hình mở khoá trước đây."</string>
+    <string name="lockpassword_confirm_your_pattern_details_frp" product="device" msgid="5454624762517414834">"Đã đặt lại thiết bị về trạng thái cài đặt ban đầu. Để sử dụng, hãy nhập hình mở khoá trước đây."</string>
+    <string name="lockpassword_confirm_your_pin_details_frp" product="default" msgid="2128795640346033349">"Điện thoại đã được đặt lại về cài đặt gốc. Để sử dụng điện thoại này, hãy nhập mã PIN trước đó."</string>
+    <string name="lockpassword_confirm_your_pin_details_frp" product="tablet" msgid="8365335365718500964">"Đã đặt lại máy tính bảng về trạng thái cài đặt ban đầu. Để sử dụng, hãy nhập hình mã PIN trước đây."</string>
+    <string name="lockpassword_confirm_your_pin_details_frp" product="device" msgid="1755588602707523835">"Đã đặt lại thiết bị về trạng thái cài đặt ban đầu. Để sử dụng, hãy nhập hình mã PIN trước đây."</string>
+    <string name="lockpassword_confirm_your_password_details_frp" product="default" msgid="4031863562975125016">"Điện thoại đã được đặt lại về cài đặt gốc. Để sử dụng điện thoại này, hãy nhập mật khẩu trước đó."</string>
+    <string name="lockpassword_confirm_your_password_details_frp" product="tablet" msgid="3899701773001146600">"Đã đặt lại máy tính bảng về trạng thái cài đặt ban đầu. Để sử dụng, hãy nhập mật khẩu trước đây."</string>
+    <string name="lockpassword_confirm_your_password_details_frp" product="device" msgid="2683204467262573702">"Đã đặt lại thiết bị về trạng thái cài đặt ban đầu. Để sử dụng thiết bị, hãy nhập mật khẩu trước đây."</string>
     <string name="lockpassword_confirm_your_pattern_header_frp" msgid="5641858015891896427">"Xác minh hình mở khóa"</string>
     <string name="lockpassword_confirm_your_pin_header_frp" msgid="8285647793164729982">"Xác minh mã PIN"</string>
     <string name="lockpassword_confirm_your_password_header_frp" msgid="7932240547542564033">"Xác minh mật khẩu"</string>
@@ -2090,6 +2124,8 @@
     <string name="lockpattern_settings_enable_title" msgid="7401197111303283723">"Yêu cầu hình"</string>
     <string name="lockpattern_settings_enable_summary" msgid="1116467204475387886">"Phải vẽ hình để mở khóa màn hình"</string>
     <string name="lockpattern_settings_enable_visible_pattern_title" msgid="3340969054395584754">"Hiển thị hình mở khóa"</string>
+    <string name="lockpattern_settings_enhanced_pin_privacy_title" msgid="7172693275721931683">"Bảo vệ quyền riêng tư nâng cao bằng mã PIN"</string>
+    <string name="lockpattern_settings_enhanced_pin_privacy_summary" msgid="8639588868341114740">"Tắt ảnh động khi nhập mã PIN"</string>
     <string name="lockpattern_settings_enable_visible_pattern_title_profile" msgid="5138189101808127489">"Hiển thị hình mở khóa hồ sơ"</string>
     <string name="lockpattern_settings_enable_tactile_feedback_title" msgid="2273374883831956787">"Rung khi nhấn"</string>
     <string name="lockpattern_settings_enable_power_button_instantly_locks" msgid="1638619728773344099">"Khóa tức thì bằng nút nguồn"</string>
@@ -2382,7 +2418,7 @@
     <string name="accessibility_color_and_motion_title" msgid="2323301706545305874">"Màu sắc và chuyển động"</string>
     <string name="accessibility_turn_screen_darker_title" msgid="5986223133285858349">"Giảm bớt độ sáng màn hình"</string>
     <string name="interaction_control_category_title" msgid="2696474616743882372">"Điều khiển tương tác"</string>
-    <string name="accessibility_tap_assistance_title" msgid="1058913033421048284">"Điều khiển thời gian"</string>
+    <string name="accessibility_tap_assistance_title" msgid="1058913033421048284">"Điều khiển có hẹn giờ"</string>
     <string name="accessibility_system_controls_title" msgid="6403287349518987624">"Điều khiển hệ thống"</string>
     <string name="user_installed_services_category_title" msgid="2639470729311439731">"Ứng dụng đã tải xuống"</string>
     <string name="experimental_category_title" msgid="898904396646344152">"Thử nghiệm"</string>
@@ -2813,7 +2849,7 @@
     <string name="history_details_title" msgid="8628584613889559355">"Chi tiết lịch sử"</string>
     <string name="advanced_battery_preference_title" msgid="3790901207877260883">"Mức sử dụng pin"</string>
     <string name="advanced_battery_preference_summary_with_hours" msgid="954091349133320955">"Xem mức sử dụng trong 24 giờ qua"</string>
-    <string name="advanced_battery_preference_summary" msgid="6088389774708000305">"Xem mức sử dụng từ lần sạc đầy gần nhất"</string>
+    <string name="advanced_battery_preference_summary" msgid="2372763700477268393">"Xem mức sử dụng từ lần sạc đầy gần nhất"</string>
     <string name="battery_details_title" msgid="3289680399291090588">"Mức sử dụng pin của ứng dụng"</string>
     <string name="details_subtitle" msgid="2550872569652785527">"Chi tiết sử dụng"</string>
     <string name="controls_subtitle" msgid="3759606830916441564">"Điều chỉnh việc sử dụng nguồn"</string>
@@ -2833,10 +2869,14 @@
     <string name="battery_tip_early_heads_up_done_summary" msgid="7858923105760361208">"Một số tính năng có thể bị hạn chế"</string>
     <string name="battery_tip_high_usage_title" msgid="9110720762506146697">"Mức sử dụng pin cao"</string>
     <string name="battery_tip_high_usage_summary" msgid="3938999581403084551">"Xem các ứng dụng có mức sử dụng pin cao nhất"</string>
-    <string name="battery_tip_limited_temporarily_title" msgid="5962767837251276527">"Tạm dừng sạc pin"</string>
-    <string name="battery_tip_limited_temporarily_summary" msgid="5254922316684499816">"Bảo vệ pin để kéo dài tuổi thọ pin"</string>
-    <!-- no translation found for battery_tip_limited_temporarily_extra_summary (8876637325622106400) -->
-    <skip />
+    <string name="battery_tip_limited_temporarily_title" msgid="6258554134146272311">"Quá trình sạc được tối ưu hoá để bảo vệ pin"</string>
+    <string name="battery_tip_limited_temporarily_summary" msgid="6836981984725209843">"Để giúp kéo dài tuổi thọ pin, quá trình sạc sẽ được tối ưu hoá"</string>
+    <string name="battery_tip_dock_defender_future_bypass_title" msgid="4332616280495788195">"Quá trình sạc được tối ưu hoá để bảo vệ pin"</string>
+    <string name="battery_tip_dock_defender_future_bypass_summary" msgid="7870758621381307597">"Để giúp kéo dài tuổi thọ pin, quá trình sạc sẽ được tối ưu hoá khi bạn gắn thiết bị vào đế"</string>
+    <string name="battery_tip_dock_defender_active_title" msgid="1414785238383255699">"Quá trình sạc được tối ưu hoá để bảo vệ pin"</string>
+    <string name="battery_tip_dock_defender_active_summary" msgid="3512082623718801459">"Để giúp kéo dài tuổi thọ pin, quá trình sạc sẽ được tối ưu hoá khi bạn gắn thiết bị vào đế"</string>
+    <string name="battery_tip_dock_defender_temporarily_bypassed_title" msgid="1679449361090557201">"Sạc đầy"</string>
+    <string name="battery_tip_dock_defender_temporarily_bypassed_summary" msgid="1099500476761333281">"Để bảo vệ pin, quá trình sạc sẽ được tối ưu hoá trong lần tới khi bạn gắn máy tính bảng vào đế"</string>
     <string name="battery_tip_limited_temporarily_sec_button_content_description" msgid="5648444926736883551">"Tìm hiểu thêm về việc quá trình sạc bị tạm dừng"</string>
     <string name="battery_tip_limited_temporarily_dialog_resume_charge" msgid="2302295458913832342">"Tiếp tục sạc"</string>
     <string name="battery_tip_limited_temporarily_dialog_msg" product="default" msgid="8125639486214812735">"Trong một số điều kiện, chẳng hạn như nhiệt độ cao và thời gian sạc lâu, mức sạc có thể bị hạn chế ở <xliff:g id="PERCENT">%1$s</xliff:g> để duy trì độ bền của pin.\n\nKhi các điều kiện đó chấm dứt, điện thoại của bạn sẽ tự động sạc như bình thường."</string>
@@ -2994,25 +3034,25 @@
     <string name="battery_detail_power_usage" msgid="1492926471397355477">"Mức sử dụng pin"</string>
     <string name="battery_detail_info_title" msgid="5896661833554333683">"Kể từ lúc sạc đầy"</string>
     <string name="battery_detail_manage_title" msgid="7910805419446927887">"Quản lý mức sử dụng pin"</string>
-    <string name="battery_total_and_bg_usage" msgid="8266478675516886819">"Tổng cộng <xliff:g id="TIME_0">^1</xliff:g> • <xliff:g id="TIME_1">^2</xliff:g> ở chế độ nền\nkể từ lần sạc đầy gần đây nhất"</string>
+    <string name="battery_total_and_bg_usage" msgid="8435738393326063685">"Tổng <xliff:g id="TIME_0">^1</xliff:g> • <xliff:g id="TIME_1">^2</xliff:g> ở chế độ nền\nkể từ lần sạc đầy gần nhất"</string>
     <string name="battery_total_and_bg_usage_24hr" msgid="2393832614028187281">"Tổng cộng <xliff:g id="TIME_0">^1</xliff:g> • <xliff:g id="TIME_1">^2</xliff:g> ở chế độ nền\ntrong 24 giờ qua"</string>
     <string name="battery_total_and_bg_usage_with_period" msgid="2809037516933951047">"Tổng <xliff:g id="TIME_0">^1</xliff:g> • <xliff:g id="TIME_1">^2</xliff:g> ở chế độ nền\ntrong khoảng thời gian <xliff:g id="TIME_PERIOD">^3</xliff:g>"</string>
-    <string name="battery_total_usage_less_minute" msgid="7614894994853812076">"Tổng cộng chưa đến 1 phút kể từ lần sạc gần đây nhất"</string>
+    <string name="battery_total_usage_less_minute" msgid="3199193389086828320">"Tổng chưa đến 1 phút kể từ lần sạc đầy gần nhất"</string>
     <string name="battery_total_usage_less_minute_24hr" msgid="699268449496083696">"Tổng cộng chưa đến 1 phút trong 24 giờ qua"</string>
     <string name="battery_total_usage_less_minute_with_period" msgid="571923652373556609">"Tổng chưa đến 1 phút trong khoảng thời gian <xliff:g id="TIME_PERIOD">^1</xliff:g>"</string>
-    <string name="battery_bg_usage_less_minute" msgid="3919299699317615641">"Ở chế độ nền chưa đến 1 phút kể từ lần sạc gần đây nhất"</string>
+    <string name="battery_bg_usage_less_minute" msgid="7776884932074493406">"Chưa đến 1 phút ở chế độ nền kể từ lần sạc đầy gần nhất"</string>
     <string name="battery_bg_usage_less_minute_24hr" msgid="5016983623297552985">"Ở chế độ nền chưa đến 1 phút trong 24 giờ qua"</string>
     <string name="battery_bg_usage_less_minute_with_period" msgid="7624741677867017430">"Ở chế độ nền chưa đến 1 phút trong khoảng thời gian <xliff:g id="TIME_PERIOD">^1</xliff:g>"</string>
-    <string name="battery_total_usage" msgid="4685408616230899847">"Tổng cộng <xliff:g id="TIME">^1</xliff:g> kể từ lần sạc đầy gần đây nhất"</string>
+    <string name="battery_total_usage" msgid="4811532932663354619">"Tổng <xliff:g id="TIME">^1</xliff:g> kể từ lần sạc đầy gần nhất"</string>
     <string name="battery_total_usage_24hr" msgid="3907495067623665787">"Tổng cộng <xliff:g id="TIME">^1</xliff:g> trong 24 giờ qua"</string>
     <string name="battery_total_usage_with_period" msgid="2849061229625950626">"Tổng <xliff:g id="TIME_0">^1</xliff:g> trong khoảng thời gian <xliff:g id="TIME_PERIOD">^2</xliff:g>"</string>
-    <string name="battery_bg_usage" msgid="548670902301883980">"<xliff:g id="TIME">^1</xliff:g> ở chế độ nền kể từ lần sạc đầy gần nhất"</string>
+    <string name="battery_bg_usage" msgid="8262917746299259350">"<xliff:g id="TIME">^1</xliff:g> ở chế độ nền kể từ lần sạc đầy gần nhất"</string>
     <string name="battery_bg_usage_24hr" msgid="1999734910656674710">"<xliff:g id="TIME">^1</xliff:g> ở chế độ nền trong 24 giờ qua"</string>
     <string name="battery_bg_usage_with_period" msgid="992952174445045711">"<xliff:g id="TIME_0">^1</xliff:g> ở chế độ nền trong khoảng thời gian <xliff:g id="TIME_PERIOD">^2</xliff:g>"</string>
-    <string name="battery_total_usage_and_bg_less_minute_usage" msgid="1460882261983325026">"Tổng cộng <xliff:g id="TIME">^1</xliff:g> • Ở chế độ nền chưa đến 1 phút\nkể từ lần sạc đầy gần đây nhất"</string>
+    <string name="battery_total_usage_and_bg_less_minute_usage" msgid="3861884807364163833">"Tổng <xliff:g id="TIME">^1</xliff:g> • chưa đến 1 phút ở chế độ nền\nkể từ lần sạc đầy gần nhất"</string>
     <string name="battery_total_usage_and_bg_less_minute_usage_24hr" msgid="1721830675789709748">"Tổng cộng <xliff:g id="TIME">^1</xliff:g> • Ở chế độ nền chưa đến 1 phút\ntrong 24 giờ qua"</string>
     <string name="battery_total_usage_and_bg_less_minute_usage_with_period" msgid="5943281928474598517">"Tổng <xliff:g id="TIME_0">^1</xliff:g> • Ở chế độ nền chưa đến 1 phút\ntrong khoảng thời gian <xliff:g id="TIME_PERIOD">^2</xliff:g>"</string>
-    <string name="battery_not_usage" msgid="1472275761547230196">"Không sử dụng pin kể từ lần sạc đầy gần đây nhất"</string>
+    <string name="battery_not_usage" msgid="3851536644733662392">"Không sử dụng kể từ lần sạc đầy gần nhất"</string>
     <string name="battery_not_usage_24hr" msgid="8397519536160741248">"Không sử dụng pin trong 24 giờ qua"</string>
     <string name="battery_usage_without_time" msgid="1346894834339420538"></string>
     <string name="battery_usage_other_users" msgid="9002643295562500693">"Người dùng khác"</string>
@@ -3492,7 +3532,7 @@
     <string name="user_remove_user_menu" msgid="2183714948094429367">"Xóa <xliff:g id="USER_NAME">%1$s</xliff:g> khỏi thiết bị"</string>
     <string name="user_lockscreen_settings" msgid="4596612658981942092">"Cài đặt màn hình khóa"</string>
     <string name="user_add_on_lockscreen_menu" msgid="2539059062034644966">"Thêm người dùng từ màn hình khóa"</string>
-    <string name="switch_to_user_zero_when_docked" msgid="2554028721803481458">"Chuyển sang người dùng quản trị khi gắn vào đế sạc"</string>
+    <string name="switch_to_dock_user_when_docked" msgid="2324395443311905635">"Chuyển sang người dùng quản trị khi gắn vào đế sạc"</string>
     <string name="user_confirm_remove_self_title" msgid="926265330805361832">"Xóa chính bạn?"</string>
     <string name="user_confirm_remove_title" msgid="3626559103278006002">"Xóa người dùng này?"</string>
     <string name="user_profile_confirm_remove_title" msgid="3131574314149375354">"Xóa hồ sơ này?"</string>
@@ -3808,7 +3848,9 @@
     <string name="call_volume_option_title" msgid="1461105986437268924">"Âm lượng cuộc gọi"</string>
     <string name="alarm_volume_option_title" msgid="6398641749273697140">"Âm lượng chuông báo"</string>
     <string name="ring_volume_option_title" msgid="1520802026403038560">"Âm lượng chuông và thông báo"</string>
+    <string name="separate_ring_volume_option_title" msgid="2212910223857375951">"Âm lượng chuông"</string>
     <string name="notification_volume_option_title" msgid="4838818791683615978">"Âm lượng thông báo"</string>
+    <string name="notification_volume_disabled_summary" msgid="8679988555852056079">"Chế độ cài đặt này bị vô hiệu hoá vì đang tắt chuông"</string>
     <string name="ringtone_title" msgid="3271453110387368088">"Nhạc chuông điện thoại"</string>
     <string name="notification_ringtone_title" msgid="6924501621312095512">"Âm thanh thông báo mặc định"</string>
     <string name="notification_unknown_sound_title" msgid="1319708450698738980">"Âm thanh do ứng dụng cung cấp"</string>
@@ -3872,7 +3914,7 @@
     <string name="zen_mode_restrict_notifications_mute_footer" msgid="2152115038156049608">"Khi có thông báo, điện thoại của bạn sẽ không phát ra âm thanh hoặc rung."</string>
     <string name="zen_mode_restrict_notifications_hide" msgid="5997930361607752541">"Không hiển thị hoặc phát âm thanh khi có thông báo"</string>
     <string name="zen_mode_restrict_notifications_hide_summary" msgid="6005445725686969583">"Bạn sẽ không nghe thấy hoặc nhìn thấy thông báo"</string>
-    <string name="zen_mode_restrict_notifications_hide_footer" msgid="4314772315731485747">"Điện thoại của bạn sẽ không hiển thị, rung hoặc phát ra âm thanh cho các thông báo mới hay thông báo hiện có. Lưu ý rằng các thông báo quan trọng cho hoạt động và trạng thái của điện thoại sẽ vẫn xuất hiện.\n\nKhi bạn tắt chế độ Không làm phiền, hãy tìm các thông báo đã bỏ lỡ bằng cách vuốt xuống từ đầu màn hình."</string>
+    <string name="zen_mode_restrict_notifications_hide_footer" msgid="3761837271201073330">"Điện thoại của bạn sẽ không hiển thị, rung hoặc phát ra âm thanh cho các thông báo mới hay thông báo hiện có. Xin lưu ý rằng các thông báo quan trọng cho trạng thái và hoạt động trên thiết bị sẽ vẫn xuất hiện.\n\nKhi bạn tắt chế độ Không làm phiền, hãy tìm các thông báo đã bỏ lỡ bằng cách vuốt xuống từ đầu màn hình."</string>
     <string name="zen_mode_restrict_notifications_custom" msgid="5469078057954463796">"Tùy chỉnh"</string>
     <string name="zen_mode_restrict_notifications_enable_custom" msgid="4303255634151330401">"Bật cài đặt tùy chỉnh"</string>
     <string name="zen_mode_restrict_notifications_disable_custom" msgid="5062332754972217218">"Xóa cài đặt tùy chỉnh"</string>
@@ -3896,7 +3938,7 @@
     <string name="zen_mode_block_effect_summary_sound" msgid="1559968890497946901">"Âm thanh và rung"</string>
     <string name="zen_mode_block_effect_summary_some" msgid="2730383453754229650">"Âm thanh, rung và một số tín hiệu hình ảnh của thông báo"</string>
     <string name="zen_mode_block_effect_summary_all" msgid="3131918059492425222">"Âm thanh, rung và tín hiệu hình ảnh của thông báo"</string>
-    <string name="zen_mode_blocked_effects_footer" msgid="1115914818435434668">"Các thông báo cần thiết cho hoạt động và trạng thái cơ bản của điện thoại sẽ không bao giờ bị ẩn."</string>
+    <string name="zen_mode_blocked_effects_footer" msgid="6403365663466620328">"Các thông báo cần thiết cho trạng thái và hoạt động cơ bản trên thiết bị sẽ không bao giờ bị ẩn."</string>
     <string name="zen_mode_no_exceptions" msgid="1580136061336585873">"Không"</string>
     <string name="zen_mode_other_options" msgid="3399967231522580421">"tùy chọn khác"</string>
     <string name="zen_mode_add" msgid="8789024026733232566">"Thêm"</string>
@@ -4030,6 +4072,8 @@
     <string name="lockscreen_bypass_summary" msgid="464277506200346748">"Sau khi mở khóa, chuyển thẳng đến màn hình mà bạn dùng gần đây nhất"</string>
     <string name="keywords_lockscreen_bypass" msgid="41035425468915498">"Khóa màn hình, Màn hình khóa, Bỏ qua"</string>
     <string name="locked_work_profile_notification_title" msgid="279367321791301499">"Khi hồ sơ công việc bị khóa"</string>
+    <string name="unseen_notifs_lock_screen" msgid="6910701117021324612">"Chỉ hiển thị thông báo mới trên màn hình khoá"</string>
+    <string name="unseen_notifs_lock_screen_summary" msgid="5996722793868021391">"Tự động xoá thông báo đã xem trước đó khỏi màn hình khoá"</string>
     <string name="lock_screen_notifs_title" msgid="3412042692317304449">"Thông báo trên màn hình khóa"</string>
     <string name="lock_screen_notifs_show_all_summary" msgid="4226586018375762117">"Hiện thông báo cuộc trò chuyện, mặc định và im lặng"</string>
     <string name="lock_screen_notifs_show_all" msgid="1300418674456749664">"Hiện các cuộc trò chuyện ở chế độ mặc định và im lặng"</string>
@@ -4201,9 +4245,10 @@
     <string name="zen_access_detail_switch" msgid="4183681772666138993">"Cho phép tính năng Không làm phiền"</string>
     <string name="zen_access_empty_text" msgid="3779921853282293080">"Không có ứng dụng đã cài đặt nào yêu cầu quyền truy cập chế độ Không làm phiền"</string>
     <string name="loading_notification_apps" msgid="5139471829295287945">"Đang tải ứng dụng…"</string>
-    <string name="app_notifications_off_desc" msgid="6691342160980435901">"Theo yêu cầu của bạn, Android đang chặn không cho thông báo của ứng dụng này xuất hiện trên thiết bị này"</string>
+    <string name="app_notifications_off_desc" msgid="2484843759466874201">"Bạn chưa cho phép thông báo từ ứng dụng này"</string>
     <string name="channel_notifications_off_desc" msgid="6202042207121633488">"Theo yêu cầu của bạn, Android đang chặn không cho danh mục thông báo này xuất hiện trên thiết bị này"</string>
     <string name="channel_group_notifications_off_desc" msgid="9096417708500595424">"Theo yêu cầu của bạn, Android đang chặn không cho nhóm thông báo này xuất hiện trên thiết bị này"</string>
+    <string name="app_notifications_not_send_desc" msgid="5683060986735070528">"Ứng dụng này không gửi thông báo"</string>
     <string name="notification_channels" msgid="1502969522886493799">"Danh mục"</string>
     <string name="notification_channels_other" msgid="18159805343647908">"Khác"</string>
     <plurals name="notification_group_summary" formatted="false" msgid="483490958130993160">
@@ -4401,7 +4446,7 @@
     <string name="warning_button_text" msgid="1274234338874005639">"Cảnh báo"</string>
     <string name="suggestion_button_text" msgid="4370673818678692873">"Ok"</string>
     <string name="suggestion_button_close" msgid="6865170855573283759">"Đóng"</string>
-    <string name="device_feedback" msgid="5351614458411688608">"Gửi phản hồi về thiết bị này"</string>
+    <string name="device_feedback" msgid="5351614458411688608">"Gửi ý kiến phản hồi về thiết bị này"</string>
     <string name="restr_pin_enter_admin_pin" msgid="4435410646541671918">"Nhập mã PIN quản trị"</string>
     <string name="switch_on_text" msgid="5664542327776075105">"Đang bật"</string>
     <string name="switch_off_text" msgid="1315547447393646667">"Đang tắt"</string>
@@ -5041,7 +5086,7 @@
     <string name="swipe_up_to_switch_apps_suggestion_summary" msgid="8885866570559435110">"Bật cử chỉ mới để chuyển đổi giữa các ứng dụng"</string>
     <string name="emergency_settings_preference_title" msgid="6183455153241187148">"An toàn và khẩn cấp"</string>
     <string name="emergency_dashboard_summary" msgid="401033951074039302">"Khẩn cấp, thông tin y tế, cảnh báo"</string>
-    <string name="edge_to_edge_navigation_title" msgid="714427081306043819">"Di chuyển bằng cử chỉ"</string>
+    <string name="edge_to_edge_navigation_title" msgid="714427081306043819">"Thao tác bằng cử chỉ"</string>
     <string name="edge_to_edge_navigation_summary" msgid="8497033810637690561">"Để trở về Màn hình chính, hãy vuốt lên từ cuối màn hình. Để chuyển ứng dụng, hãy vuốt lên từ cuối màn hình, giữ rồi thả ra. Để quay lại, hãy vuốt từ mép trái hoặc mép phải."</string>
     <string name="legacy_navigation_title" msgid="7877402855994423727">"Di chuyển bằng 3 nút"</string>
     <string name="legacy_navigation_summary" msgid="5905301067778326433">"Quay lại, trở về Màn hình chính và chuyển ứng dụng bằng các nút ở cuối màn hình."</string>
@@ -5492,6 +5537,7 @@
     <string name="mobile_data_usage_title" msgid="2047864499317759728">"Mức sử dụng dữ liệu của ứng dụng"</string>
     <string name="mobile_network_mode_error" msgid="9222056129897416074">"Chế độ mạng <xliff:g id="NETWORKMODEID">%1$d</xliff:g> không hợp lệ. Bỏ qua."</string>
     <string name="mobile_network_apn_title" msgid="5582995550142073054">"Tên điểm truy cập"</string>
+    <string name="keywords_access_point_names" msgid="8174967126858505945">"apn"</string>
     <string name="manual_mode_disallowed_summary" msgid="4243142645520152175">"Không sử dụng được khi kết nối với <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
     <string name="see_more" msgid="7499355691042812723">"Xem thêm"</string>
     <string name="see_less" msgid="2642392725363552793">"Ẩn bớt"</string>
@@ -5586,7 +5632,7 @@
     <string name="contextual_card_removed_message" msgid="5755438207494260867">"Đã xóa đề xuất"</string>
     <string name="contextual_card_undo_dismissal_text" msgid="5200381837316691406">"Hủy"</string>
     <string name="low_storage_summary" msgid="1979492757417779718">"Sắp hết bộ nhớ. Đã dùng <xliff:g id="PERCENTAGE">%1$s</xliff:g> – Còn trống <xliff:g id="FREE_SPACE">%2$s</xliff:g>"</string>
-    <string name="contextual_card_feedback_send" msgid="7409408664417908922">"Gửi phản hồi"</string>
+    <string name="contextual_card_feedback_send" msgid="7409408664417908922">"Gửi ý kiến phản hồi"</string>
     <string name="contextual_card_feedback_confirm_message" msgid="3186334562157665381">"Bạn có muốn cung cấp phản hồi về nội dung đề xuất này cho chúng tôi không?"</string>
     <string name="copyable_slice_toast" msgid="1008251852798990606">"Đã sao chép <xliff:g id="COPY_CONTENT">%1$s</xliff:g>vào bảng nhớ tạm."</string>
     <string name="search_bar_account_avatar_content_description" msgid="880523277036898350"></string>
@@ -5642,7 +5688,7 @@
     <string name="bug_report_handler_title" msgid="713439959113250125">"Trình xử lý báo cáo lỗi"</string>
     <string name="bug_report_handler_picker_footer_text" msgid="4935758328366585673">"Xác định ứng dụng nào xử lý phím tắt Báo cáo lỗi trên thiết bị của bạn."</string>
     <string name="personal_profile_app_subtext" msgid="5586060806997067676">"Cá nhân"</string>
-    <string name="work_profile_app_subtext" msgid="5043419461440127879">"Cơ quan"</string>
+    <string name="work_profile_app_subtext" msgid="5043419461440127879">"Nơi làm việc"</string>
     <string name="system_default_app_subtext" msgid="5212055189703164839">"Theo chế độ mặc định của hệ thống"</string>
     <string name="select_invalid_bug_report_handler_toast_text" msgid="8857326334015386692">"Lựa chọn này không còn hợp lệ nữa. Hãy thử lại."</string>
     <string name="quick_controls_lower" msgid="6675573610027367819">"tùy chọn điều khiển thiết bị"</string>
@@ -5672,6 +5718,11 @@
     <string name="lockscreen_trivial_disabled_controls_summary" msgid="7593626010580689155">"Để sử dụng, trước tiên, hãy bật tuỳ chọn \"Hiển thị các nút điều khiển thiết bị\""</string>
     <string name="lockscreen_double_line_clock_summary" msgid="2916159550425093703">"Hiện đồng hồ kép khi có"</string>
     <string name="lockscreen_double_line_clock_setting_toggle" msgid="3408639316001688529">"Đồng hồ kép"</string>
+    <string name="lockscreen_quick_affordances_title" msgid="8615741551327565793">"Lối tắt"</string>
+    <plurals name="lockscreen_quick_affordances_summary" formatted="false" msgid="4225396036524703997">
+      <item quantity="other"><xliff:g id="FIRST_1">%1$s</xliff:g>, <xliff:g id="SECOND">%2$s</xliff:g></item>
+      <item quantity="one"><xliff:g id="FIRST_0">%1$s</xliff:g></item>
+    </plurals>
     <string name="rtt_settings_title" msgid="7049259598645966354"></string>
     <string name="rtt_settings_no_visible" msgid="7440356831140948382"></string>
     <string name="rtt_settings_visible_during_call" msgid="7866181103286073700"></string>
@@ -5877,10 +5928,13 @@
     <string name="dream_picker_category" msgid="7726447836872744867">"Chọn một trình bảo vệ màn hình"</string>
     <string name="dream_complications_toggle_title" msgid="4273232303027449163">"Hiện thêm thông tin"</string>
     <string name="dream_complications_toggle_summary" msgid="8088911054987524904">"Hiển thị thời gian, thời tiết hoặc các thông tin khác trên trình bảo vệ màn hình"</string>
+    <string name="dream_home_controls_toggle_title" msgid="706799741564479248">"Hiện các nút điều khiển nhà"</string>
+    <string name="dream_home_controls_toggle_summary" msgid="4102519907917430579">"Hiện các nút điều khiển nhà từ trình bảo vệ màn hình"</string>
     <string name="dream_more_settings_category" msgid="3119192146760773748">"Chế độ cài đặt khác"</string>
     <string name="dream_setup_title" msgid="2458303874255396142">"Chọn trình bảo vệ màn hình"</string>
     <string name="dream_setup_description" msgid="7508547154038580296">"Chọn nội dung bạn sẽ thấy trên màn hình khi máy tính bảng được cắm vào đế sạc. Thiết bị có thể tiêu hao nhiều năng lượng hơn khi bạn dùng trình bảo vệ màn hình."</string>
     <string name="customize_button_title" msgid="1110284655990203359">"Tuỳ chỉnh"</string>
+    <string name="customize_button_description" msgid="7440248477266126231">"Tuỳ chỉnh <xliff:g id="SCREENSAVER_NAME">%1$s</xliff:g>"</string>
     <string name="reboot_dialog_enable_freeform_support" msgid="6412591361284929149">"Cần phải khởi động lại để bật tuỳ chọn hỗ trợ dạng tự do."</string>
     <string name="reboot_dialog_force_desktop_mode" msgid="2021839270403432948">"Cần phải khởi động lại để buộc chạy chế độ máy tính trên màn hình phụ."</string>
     <string name="reboot_dialog_reboot_now" msgid="235616015988522355">"Khởi động lại ngay"</string>

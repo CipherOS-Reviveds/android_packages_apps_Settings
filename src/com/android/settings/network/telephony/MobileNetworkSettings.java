@@ -120,6 +120,10 @@ public class MobileNetworkSettings extends AbstractMobileNetworkSettings {
 
     @Override
     protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
+        if (!SubscriptionUtil.isSimHardwareVisible(context)) {
+            finish();
+            return Arrays.asList();
+        }
         if (getArguments() == null) {
             Intent intent = getIntent();
             if (intent != null) {
@@ -207,7 +211,7 @@ public class MobileNetworkSettings extends AbstractMobileNetworkSettings {
                 use(OpenNetworkSelectPagePreferenceController.class).init(mSubId);
         final AutoSelectPreferenceController autoSelectPreferenceController =
                 use(AutoSelectPreferenceController.class)
-                        .init(mSubId)
+                        .init(getLifecycle(), mSubId)
                         .addListener(openNetworkSelectPagePreferenceController);
         use(NetworkPreferenceCategoryController.class).init(mSubId)
                 .setChildren(Arrays.asList(autoSelectPreferenceController));
@@ -398,7 +402,8 @@ public class MobileNetworkSettings extends AbstractMobileNetworkSettings {
                 /** suppress full page if user is not admin */
                 @Override
                 protected boolean isPageSearchEnabled(Context context) {
-                    return context.getSystemService(UserManager.class).isAdminUser();
+                    return SubscriptionUtil.isSimHardwareVisible(context) &&
+                            context.getSystemService(UserManager.class).isAdminUser();
                 }
             };
 

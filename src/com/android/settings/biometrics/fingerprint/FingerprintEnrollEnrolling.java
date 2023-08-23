@@ -17,6 +17,7 @@
 package com.android.settings.biometrics.fingerprint;
 
 import static android.hardware.biometrics.BiometricFingerprintConstants.FINGERPRINT_ERROR_USER_CANCELED;
+import static android.text.Layout.HYPHENATION_FREQUENCY_NONE;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
@@ -53,10 +54,12 @@ import android.view.Surface;
 import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityManager;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.IdRes;
@@ -71,12 +74,15 @@ import com.android.settings.core.instrumentation.InstrumentedDialogFragment;
 import com.android.settingslib.display.DisplayDensityUtils;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.airbnb.lottie.LottieCompositionFactory;
 import com.airbnb.lottie.LottieProperty;
 import com.airbnb.lottie.model.KeyPath;
 import com.google.android.setupcompat.template.FooterBarMixin;
 import com.google.android.setupcompat.template.FooterButton;
 import com.google.android.setupcompat.util.WizardManagerHelper;
 import com.google.android.setupdesign.GlifLayout;
+import com.google.android.setupdesign.template.DescriptionMixin;
+import com.google.android.setupdesign.template.HeaderMixin;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -168,7 +174,8 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
     private Vibrator mVibrator;
     private boolean mIsSetupWizard;
     private boolean mIsOrientationChanged;
-    private boolean mIsCanceled;
+    @VisibleForTesting
+    boolean mIsCanceled;
     private AccessibilityManager mAccessibilityManager;
     private boolean mIsAccessibilityEnabled;
     private LottieAnimationView mIllustrationLottie;
@@ -181,6 +188,7 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
     private boolean mHaveShownSfpsLeftEdgeLottie;
     private boolean mHaveShownSfpsRightEdgeLottie;
     private boolean mShouldShowLottie;
+    private ObjectAnimator mHelpAnimation;
 
     private OrientationEventListener mOrientationEventListener;
     private int mPreviousRotation = 0;
@@ -188,15 +196,16 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
     @VisibleForTesting
     protected boolean shouldShowLottie() {
         DisplayDensityUtils displayDensity = new DisplayDensityUtils(getApplicationContext());
-        int currentDensityIndex = displayDensity.getCurrentIndex();
-        final int currentDensity = displayDensity.getValues()[currentDensityIndex];
-        final int defaultDensity = displayDensity.getDefaultDensity();
+        int currentDensityIndex = displayDensity.getCurrentIndexForDefaultDisplay();
+        final int currentDensity = displayDensity.getDefaultDisplayDensityValues()
+                [currentDensityIndex];
+        final int defaultDensity = displayDensity.getDefaultDensityForDefaultDisplay();
         return defaultDensity == currentDensity;
     }
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
-        if (hasFocus) {
+        if (hasFocus || mIsCanceled) {
             return;
         }
 
@@ -270,7 +279,7 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
             setDescriptionText(R.string.security_settings_udfps_enroll_start_message);
         } else if (mCanAssumeSfps) {
             setContentView(R.layout.sfps_enroll_enrolling);
-            setDescriptionText(R.string.security_settings_fingerprint_enroll_start_message);
+            setHelpAnimation();
         } else {
             setContentView(R.layout.fingerprint_enroll_enrolling);
             setDescriptionText(R.string.security_settings_fingerprint_enroll_start_message);
@@ -340,12 +349,26 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
                 return true;
             });
         }
+
+        final Configuration config = getApplicationContext().getResources().getConfiguration();
+        maybeHideSfpsText(config);
     }
 
+    private void setHelpAnimation() {
+        final float translationX = 40;
+        final int duration = 550;
+        final RelativeLayout progressLottieLayout = findViewById(R.id.progress_lottie);
+        mHelpAnimation = ObjectAnimator.ofFloat(progressLottieLayout,
+                "translationX" /* propertyName */,
+                0, translationX, -1 * translationX, translationX, 0f);
+        mHelpAnimation.setInterpolator(new AccelerateDecelerateInterpolator());
+        mHelpAnimation.setDuration(duration);
+        mHelpAnimation.setAutoCancel(false);
+    }
     @Override
     protected BiometricEnrollSidecar getSidecar() {
-        final FingerprintEnrollSidecar sidecar = new FingerprintEnrollSidecar();
-        sidecar.setEnrollReason(FingerprintManager.ENROLL_ENROLL);
+        final FingerprintEnrollSidecar sidecar = new FingerprintEnrollSidecar(this,
+                FingerprintManager.ENROLL_ENROLL);
         return sidecar;
     }
 
@@ -411,8 +434,10 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
 
     @VisibleForTesting
     void onCancelEnrollment(@IdRes int errorMsgId) {
-        FingerprintErrorDialog.showErrorDialog(this, errorMsgId);
+        // showErrorDialog() will cause onWindowFocusChanged(false), set mIsCanceled to false
+        // before showErrorDialog() to prevent that another error dialog is triggered again.
         mIsCanceled = true;
+        FingerprintErrorDialog.showErrorDialog(this, errorMsgId, mCanAssumeUdfps);
         mIsOrientationChanged = false;
         cancelEnrollment();
         stopIconAnimation();
@@ -519,7 +544,7 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
                     mIllustrationLottie.setContentDescription(
                             getString(R.string.security_settings_udfps_tip_fingerprint_help)
                     );
-                    configureEnrollmentStage("", R.raw.udfps_tip_hint_lottie);
+                    configureEnrollmentStage(R.raw.udfps_tip_hint_lottie);
                 }
                 break;
 
@@ -530,7 +555,7 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
                     mIllustrationLottie.setContentDescription(
                             getString(R.string.security_settings_udfps_side_fingerprint_help)
                     );
-                    configureEnrollmentStage("", R.raw.udfps_left_edge_hint_lottie);
+                    configureEnrollmentStage(R.raw.udfps_left_edge_hint_lottie);
                 } else if (mIllustrationLottie == null) {
                     if (isStageHalfCompleted()) {
                         setDescriptionText(
@@ -547,7 +572,7 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
                     mIllustrationLottie.setContentDescription(
                             getString(R.string.security_settings_udfps_side_fingerprint_help)
                     );
-                    configureEnrollmentStage("", R.raw.udfps_right_edge_hint_lottie);
+                    configureEnrollmentStage(R.raw.udfps_right_edge_hint_lottie);
 
                 } else if (mIllustrationLottie == null) {
                     if (isStageHalfCompleted()) {
@@ -599,10 +624,7 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
                                     0
                             )
                     );
-                    configureEnrollmentStage(
-                            getString(R.string.security_settings_sfps_enroll_start_message),
-                            R.raw.sfps_lottie_no_animation
-                    );
+                    configureEnrollmentStage(R.raw.sfps_lottie_no_animation);
                 }
                 break;
 
@@ -610,10 +632,7 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
                 setHeaderText(R.string.security_settings_sfps_enroll_finger_center_title);
                 if (!mHaveShownSfpsCenterLottie && mIllustrationLottie != null) {
                     mHaveShownSfpsCenterLottie = true;
-                    configureEnrollmentStage(
-                            getString(R.string.security_settings_sfps_enroll_start_message),
-                            R.raw.sfps_lottie_pad_center
-                    );
+                    configureEnrollmentStage(R.raw.sfps_lottie_pad_center);
                 }
                 break;
 
@@ -621,7 +640,7 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
                 setHeaderText(R.string.security_settings_sfps_enroll_fingertip_title);
                 if (!mHaveShownSfpsTipLottie && mIllustrationLottie != null) {
                     mHaveShownSfpsTipLottie = true;
-                    configureEnrollmentStage("", R.raw.sfps_lottie_tip);
+                    configureEnrollmentStage(R.raw.sfps_lottie_tip);
                 }
                 break;
 
@@ -629,7 +648,7 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
                 setHeaderText(R.string.security_settings_sfps_enroll_left_edge_title);
                 if (!mHaveShownSfpsLeftEdgeLottie && mIllustrationLottie != null) {
                     mHaveShownSfpsLeftEdgeLottie = true;
-                    configureEnrollmentStage("", R.raw.sfps_lottie_left_edge);
+                    configureEnrollmentStage(R.raw.sfps_lottie_left_edge);
                 }
                 break;
 
@@ -637,7 +656,7 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
                 setHeaderText(R.string.security_settings_sfps_enroll_right_edge_title);
                 if (!mHaveShownSfpsRightEdgeLottie && mIllustrationLottie != null) {
                     mHaveShownSfpsRightEdgeLottie = true;
-                    configureEnrollmentStage("", R.raw.sfps_lottie_right_edge);
+                    configureEnrollmentStage(R.raw.sfps_lottie_right_edge);
                 }
                 break;
 
@@ -648,7 +667,6 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
                 // announce a different string for a11y upon entering the page.
                 getLayout().setHeaderText(
                         R.string.security_settings_sfps_enroll_find_sensor_title);
-                setDescriptionText(R.string.security_settings_sfps_enroll_start_message);
                 final CharSequence description = getString(
                         R.string.security_settings_sfps_enroll_find_sensor_message);
                 getLayout().getHeaderTextView().setContentDescription(description);
@@ -658,11 +676,16 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
         }
     }
 
-    private void configureEnrollmentStage(CharSequence description, @RawRes int lottie) {
-        setDescriptionText(description);
-        mIllustrationLottie.setAnimation(lottie);
-        mIllustrationLottie.setVisibility(View.VISIBLE);
-        mIllustrationLottie.playAnimation();
+    @VisibleForTesting void configureEnrollmentStage(@RawRes int lottie) {
+        if (!mCanAssumeSfps) {
+            setDescriptionText("");
+        }
+        LottieCompositionFactory.fromRawRes(this, lottie)
+                .addListener((c) -> {
+                    mIllustrationLottie.setComposition(c);
+                    mIllustrationLottie.setVisibility(View.VISIBLE);
+                    mIllustrationLottie.playAnimation();
+                });
     }
 
     @EnrollStage
@@ -830,13 +853,16 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
     }
 
     private void showError(CharSequence error) {
-        if (mCanAssumeUdfps || mCanAssumeSfps) {
+        if (mCanAssumeSfps) {
+            setHeaderText(error);
+            if (!mHelpAnimation.isRunning()) {
+                mHelpAnimation.start();
+            }
+            applySfpsErrorDynamicColors(getApplicationContext(), true);
+        } else if (mCanAssumeUdfps) {
             setHeaderText(error);
             // Show nothing for subtitle when getting an error message.
             setDescriptionText("");
-            if (mCanAssumeSfps) {
-                applySfpsErrorDynamicColors(getApplicationContext(), true);
-            }
         } else {
             mErrorText.setText(error);
             if (mErrorText.getVisibility() == View.INVISIBLE) {
@@ -1037,6 +1063,7 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
 
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        maybeHideSfpsText(newConfig);
         switch(newConfig.orientation) {
             case Configuration.ORIENTATION_LANDSCAPE: {
                 updateOrientation(Configuration.ORIENTATION_LANDSCAPE);
@@ -1049,6 +1076,26 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
             default:
                 Log.e(TAG, "Error unhandled configuration change");
                 break;
+        }
+    }
+
+    private void maybeHideSfpsText(@NonNull Configuration newConfig) {
+        final HeaderMixin headerMixin = getLayout().getMixin(HeaderMixin.class);
+        final DescriptionMixin descriptionMixin = getLayout().getMixin(DescriptionMixin.class);
+        final boolean isLandscape = newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE;
+
+        if (mCanAssumeSfps) {
+            // hide the description
+            descriptionMixin.getTextView().setVisibility(View.GONE);
+            headerMixin.getTextView().setHyphenationFrequency(HYPHENATION_FREQUENCY_NONE);
+            if (isLandscape) {
+                headerMixin.setAutoTextSizeEnabled(true);
+                headerMixin.getTextView().setMinLines(0);
+                headerMixin.getTextView().setMaxLines(10);
+            } else {
+                headerMixin.setAutoTextSizeEnabled(false);
+                headerMixin.getTextView().setLines(4);
+            }
         }
     }
 

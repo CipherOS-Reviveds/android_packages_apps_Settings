@@ -49,7 +49,9 @@ public class FingerprintEnrollFinish extends BiometricEnrollBase {
     @VisibleForTesting
     static final String FINGERPRINT_SUGGESTION_ACTIVITY =
             "com.android.settings.SetupFingerprintSuggestionActivity";
+
     private FingerprintManager mFingerprintManager;
+
     private boolean mCanAssumeSfps;
 
     private boolean mIsAddAnotherOrFinish;
@@ -67,10 +69,9 @@ public class FingerprintEnrollFinish extends BiometricEnrollBase {
             setContentView(R.layout.fingerprint_enroll_finish);
         }
         setHeaderText(R.string.security_settings_fingerprint_enroll_finish_title);
+        setDescriptionText(R.string.security_settings_fingerprint_enroll_finish_v2_message);
         if (mCanAssumeSfps) {
-            setDescriptionText(R.string.security_settings_sfps_enroll_finish);
-        } else {
-            setDescriptionText(R.string.security_settings_fingerprint_enroll_finish_v2_message);
+            setDescriptionForSfps();
         }
 
         mFooterBarMixin = getLayout().getMixin(FooterBarMixin.class);
@@ -92,6 +93,20 @@ public class FingerprintEnrollFinish extends BiometricEnrollBase {
         );
     }
 
+    private void setDescriptionForSfps() {
+        final FingerprintManager fpm = Utils.getFingerprintManagerOrNull(this);
+        if (fpm != null) {
+            final List<FingerprintSensorPropertiesInternal> props =
+                    fpm.getSensorPropertiesInternal();
+            final int maxEnrollments = props.get(0).maxEnrollmentsPerUser;
+            final int enrolled = fpm.getEnrolledFingerprints(mUserId).size();
+            if (enrolled < maxEnrollments) {
+                setDescriptionText(R.string
+                        .security_settings_fingerprint_enroll_finish_v2_add_fingerprint_message);
+            }
+        }
+    }
+
     @Override
     public void onBackPressed() {
         updateFingerprintSuggestionEnableState();
@@ -103,7 +118,6 @@ public class FingerprintEnrollFinish extends BiometricEnrollBase {
     @Override
     protected void onResume() {
         super.onResume();
-
         FooterButton addButton = mFooterBarMixin.getSecondaryButton();
 
         final FingerprintManager fpm = Utils.getFingerprintManagerOrNull(this);
@@ -135,12 +149,12 @@ public class FingerprintEnrollFinish extends BiometricEnrollBase {
     @Override
     protected void onNextButtonClick(View view) {
         updateFingerprintSuggestionEnableState();
-        finishAndToNext();
+        finishAndToNext(RESULT_FINISHED);
     }
 
-    private void finishAndToNext() {
+    private void finishAndToNext(int resultCode) {
         mIsAddAnotherOrFinish = true;
-        setResult(RESULT_FINISHED);
+        setResult(resultCode);
         if (WizardManagerHelper.isAnySetupWizard(getIntent())) {
             postEnroll();
         }
@@ -187,9 +201,12 @@ public class FingerprintEnrollFinish extends BiometricEnrollBase {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         updateFingerprintSuggestionEnableState();
-        if (requestCode == BiometricUtils.REQUEST_ADD_ANOTHER && resultCode != RESULT_CANCELED) {
+        if (requestCode == BiometricUtils.REQUEST_ADD_ANOTHER && resultCode == RESULT_TIMEOUT) {
+            finishAndToNext(resultCode);
+        } else if (requestCode == BiometricUtils.REQUEST_ADD_ANOTHER
+                && resultCode != RESULT_CANCELED) {
             // If user cancel during "Add another", just use similar flow on "Next" button
-            finishAndToNext();
+            finishAndToNext(RESULT_FINISHED);
         } else {
             super.onActivityResult(requestCode, resultCode, data);
         }

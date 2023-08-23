@@ -25,17 +25,18 @@ import static com.android.settings.biometrics.fingerprint.FingerprintEnrollEnrol
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Matchers.eq;
+import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.anyInt;
+import static org.mockito.Mockito.anyString;
 import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.eq;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
@@ -50,16 +51,16 @@ import android.os.CancellationSignal;
 import android.os.Vibrator;
 import android.view.Display;
 import android.view.Surface;
-import android.widget.TextView;
+import android.view.View;
 
 import com.android.settings.R;
 import com.android.settings.testutils.FakeFeatureFactory;
 import com.android.settings.widget.RingProgressBar;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.google.android.setupdesign.GlifLayout;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
@@ -82,6 +83,8 @@ public class FingerprintEnrollEnrollingTest {
 
     @Mock private LottieAnimationView mIllustrationLottie;
 
+    @Mock private ObjectAnimator mHelpAnimation;
+
     @Mock private FingerprintEnrollSidecar mSidecar;
 
     @Mock private Display mMockDisplay;
@@ -97,19 +100,6 @@ public class FingerprintEnrollEnrollingTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         FakeFeatureFactory.setupForTest();
-    }
-
-    @Test
-    @Ignore
-    public void fingerprintEnrollHelp_shouldShowHelpText() {
-        EnrollmentCallback enrollmentCallback = verifyAndCaptureEnrollmentCallback();
-
-        enrollmentCallback.onEnrollmentProgress(123);
-        enrollmentCallback.onEnrollmentHelp(
-                FingerprintManager.FINGERPRINT_ERROR_UNABLE_TO_PROCESS, "test enrollment help");
-
-        TextView errorText = mActivity.findViewById(R.id.error_text);
-        assertThat(errorText.getText()).isEqualTo("test enrollment help");
     }
 
     @Test
@@ -151,6 +141,16 @@ public class FingerprintEnrollEnrollingTest {
     }
 
     @Test
+    public void fingerprintUdfpsOverlayEnrollment_loseFocusWithCancelFlag_shouldNotCancelAgain() {
+        initializeActivityFor(TYPE_UDFPS_OPTICAL);
+
+        mActivity.mIsCanceled = true;
+        mActivity.onWindowFocusChanged(true);
+
+        verify(mActivity, never()).onCancelEnrollment(anyInt());
+    }
+
+    @Test
     public void fingerprintSfpsEnroll_PlaysAllAnimationsAssetsCorrectly() {
         initializeActivityFor(TYPE_POWER_BUTTON);
 
@@ -181,6 +181,15 @@ public class FingerprintEnrollEnrollingTest {
         verify(mIllustrationLottie, times(5)).setAnimation(lottieAssetCaptor.capture());
         List<Integer> observedLottieAssetOrder = lottieAssetCaptor.getAllValues();
         assertThat(observedLottieAssetOrder).isEqualTo(expectedLottieAssetOrder);
+    }
+
+    @Test
+    public void fingerprintSfpsEnrollHelpAnimation() {
+        initializeActivityFor(TYPE_POWER_BUTTON);
+        ReflectionHelpers.setField(mActivity, "mHelpAnimation", mHelpAnimation);
+        mActivity.onEnrollmentHelp(0 /* helpMsgId */, "Test help message" /* helpString */);
+
+        verify(mHelpAnimation).start();
     }
 
     // SFPS_STAGE_CENTER is first stage with progress bar colors, starts at steps=25, remaining=25
@@ -256,6 +265,50 @@ public class FingerprintEnrollEnrollingTest {
         assertThat(appliedThemes.contains("SetupWizardPartnerResource")).isTrue();
     }
 
+    @Test
+    public void fingerprintSfpsEnroll_descriptionTextVisibility() {
+        initializeActivityFor(TYPE_POWER_BUTTON);
+
+        mActivity.onEnrollmentProgressChange(1 /* steps */, 1 /* remaining */);
+
+        assertThat(getLayout().getDescriptionTextView().getVisibility()).isEqualTo(View.GONE);
+    }
+
+    @Test
+    public void fingerprintUdfpsEnroll_descriptionTextVisibility() {
+        initializeActivityFor(TYPE_UDFPS_OPTICAL);
+
+        mActivity.onEnrollmentProgressChange(1 /* steps */, 1 /* remaining */);
+
+        assertThat(getLayout().getDescriptionTextView().getVisibility()).isEqualTo(View.VISIBLE);
+    }
+
+    @Test
+    public void testUdfpsConfigureEnrollmentStage_descriptionText() {
+        initializeActivityFor(TYPE_UDFPS_OPTICAL);
+
+        assertThat(getLayout().getDescriptionText()).isNotEqualTo("");
+
+        mActivity.configureEnrollmentStage(0 /* lottie */);
+
+        assertThat(getLayout().getDescriptionText()).isEqualTo("");
+    }
+
+    @Test
+    public void testSfpsConfigureEnrollmentStage_descriptionText() {
+        initializeActivityFor(TYPE_POWER_BUTTON);
+
+        assertThat(getLayout().getDescriptionTextView().getVisibility()).isEqualTo(View.GONE);
+
+        mActivity.configureEnrollmentStage(0 /* lottie */);
+
+        assertThat(getLayout().getDescriptionTextView().getVisibility()).isEqualTo(View.GONE);
+    }
+
+    private GlifLayout getLayout() {
+        return (GlifLayout) mActivity.findViewById(R.id.setup_wizard_layout);
+    }
+
     private void initializeActivityFor(int sensorType) {
         final List<ComponentInfoInternal> componentInfo = new ArrayList<>();
         final FingerprintSensorPropertiesInternal prop =
@@ -290,6 +343,9 @@ public class FingerprintEnrollEnrollingTest {
                 doReturn(mSfpsStageThresholds[stage]).when(mActivity).getStageThresholdSteps(stage);
             }
             doReturn(true).when(mSidecar).isEnrolling();
+            ReflectionHelpers.setField(mActivity, "mCanAssumeSfps", true);
+        } else if (sensorType == TYPE_UDFPS_OPTICAL) {
+            ReflectionHelpers.setField(mActivity, "mCanAssumeUdfps", true);
         }
 
         ActivityController.of(mActivity).create(savedInstanceState);

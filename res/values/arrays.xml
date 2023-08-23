@@ -158,20 +158,6 @@
         <item>1800000</item>
     </string-array>
 
-    <string-array name="entries_font_size">
-        <item msgid="6490061470416867723">Small</item>
-        <item msgid="3579015730662088893">Default</item>
-        <item msgid="1678068858001018666">Large</item>
-        <item msgid="490158884605093126">Largest</item>
-    </string-array>
-
-    <string-array name="entryvalues_font_size" translatable="false">
-        <item>0.85</item>
-        <item>1.0</item>
-        <item>1.15</item>
-        <item>1.30</item>
-    </string-array>
-
     <!-- Wi-Fi settings -->
 
     <!-- Match this with the order of NetworkInfo.DetailedState. --> <skip />
@@ -1216,6 +1202,20 @@
         <item>90</item>
     </string-array>
 
+    <!-- Options for screensaver "When to start" for devices that do not support screensavers
+         while on battery -->
+    <string-array name="when_to_start_screensaver_entries_no_battery" translatable="false">
+        <item>@string/screensaver_settings_summary_sleep</item>
+        <item>@string/screensaver_settings_summary_dock_and_charging</item>
+    </string-array>
+
+    <!-- Values for screensaver "When to start" for devices that do not support screensavers
+         while on battery -->
+    <string-array name="when_to_start_screensaver_values_no_battery" translatable="false">
+        <item>while_charging_only</item>
+        <item>while_docked_only</item>
+    </string-array>
+
     <string-array name="when_to_start_screensaver_entries" translatable="false">
         <item>@string/screensaver_settings_summary_sleep</item>
         <item>@string/screensaver_settings_summary_dock</item>
@@ -1358,6 +1358,10 @@
     <string-array name="enabled_networks_except_gsm_values" translatable="false">
         <item>"9"</item>
         <item>"0"</item>
+    </string-array>
+
+    <string-array name="enabled_networks_except_gsm_3g_values" translatable="false">
+        <item>"9"</item>
     </string-array>
 
     <string-array name="enabled_networks_except_lte_values" translatable="false">
@@ -1609,15 +1613,15 @@
         <item>1</item>
     </string-array>
 
-    <!-- Setting entries for timing out to user 0 when docked. -->
-    <string-array name="switch_to_user_zero_when_docked_timeout_entries">
+    <!-- Setting entries for timing out to the Dock User when docked. -->
+    <string-array name="switch_to_dock_user_when_docked_timeout_entries">
         <item>Never</item>
         <item>After 1 minute</item>
         <item>After 5 minutes</item>
     </string-array>
 
-    <!-- Setting values for timing out to user 0 when docked. [DO NOT TRANSLATE] -->
-    <string-array name="switch_to_user_zero_when_docked_timeout_values" translatable="false">
+    <!-- Setting values for timing out to the Dock User when docked. [DO NOT TRANSLATE] -->
+    <string-array name="switch_to_dock_user_when_docked_timeout_values" translatable="false">
         <!-- Never -->
         <item>0</item>
         <!-- 1 minute -->
@@ -1650,4 +1654,9 @@
          [CHAR LIMIT=NONE] -->
     <string-array name="allowlist_hide_summary_in_battery_usage" translatable="false">
     </string-array>
+
+    <!-- hide 3G option from preferred network type UI -->
+    <integer-array name="network_mode_3g_deprecated_carrier_id" translatable="false">
+    </integer-array>
+
 </resources>
